@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+On Home Page .
+{% for d in notes_data_from_db  %}
+<h3>
+{{d.title}}
+</h3>
+<p> {{d.text}}</p>
+<span> {{d.tag}}</span>
+<span> {{d.date}}</span>
+{% endfor %}
+<hr>
+
+<form method="POST" id="note_form">{% csrf_token %}
+      <table>
+        {{note_form.as_p}}
+      </table>
+
+      <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+</body>
+</html>

@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from notes_app import views,urls
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(r'',include('notes_app.urls')),
 ]
