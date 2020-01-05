@@ -13,9 +13,11 @@ def home(request):
         form = NoteForm()
     return render(request,'notes_app/home.html',{"notes_data_from_db":all_n,"note_form":form})
 
-# def all_notes(request):
-#     all_n=Note.objects.all()
-#     return render(request,notes_app)
+
+def edit(request,id):
+    note_id=Note.objects.get(id=id)
+    return render(request,'notes_app/edit.html',{"note":note_id})
+
 
 
 

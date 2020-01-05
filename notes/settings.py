@@ -121,6 +121,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
 os.path.join(os.path.dirname(BASE_DIR), "notes", "notes_app",  "templates","notes_app"),
-#'/home/frankbox/python/djangoapp/mysite/static/templates',
+
 )
 INTERNAL_IPS=['127.0.0.1']

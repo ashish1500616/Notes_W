@@ -6,4 +6,6 @@ from . import views
 app_name = "notes_app"
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^edit/(?P<id>\d+)/$',views.edit,name="edit_note"),
+
 ]
