@@ -9,6 +9,9 @@ class Note(models.Model):
             default=timezone.now)
     tag=models.ForeignKey('Tag', on_delete=models.CASCADE, default=True)
 
+    class Meta:
+        db_table="notes_db"
+
     def __str__(self):
         return self.title
 

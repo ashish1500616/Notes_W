@@ -10,7 +10,10 @@ On Home Page .
 <p> {{d.text}}</p>
 <span> {{d.tag}}</span>
 <span> {{d.date}}</span>
-<a href="/edit/{{d.id}}"> <span> Edit </span> </a> 
+<td>
+<a href="/edit/{{d.id}}"> <span> Edit </span> </a>&nbsp;&nbsp;&nbsp;
+<a href="/delete/{{ d.id }}">Delete</a>  
+</td>
 {% endfor %}
 <hr>
 

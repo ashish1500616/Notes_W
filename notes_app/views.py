@@ -18,6 +18,18 @@ def edit(request,id):
     note_id=Note.objects.get(id=id)
     return render(request,'notes_app/edit.html',{"note":note_id})
 
+def update(request,id):
+    note=Note.objects.get(id=id)
+    form=NoteForm(request.POST,instance=note )
+    if form.is_valid():
+        print("Form is Valid")
+        form.save()
+        return redirect('notes_app:home')
+    return render(request,'notes_app/edit.html',{"note":note})
 
 
+def destroy(request,id):
+    note_i=Note.objects.get(id=id)
+    note_i.delete()
+    return redirect('notes_app:home')
 

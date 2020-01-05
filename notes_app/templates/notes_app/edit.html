@@ -5,7 +5,7 @@
     <title>Index</title>  
 </head>  
 <body>  
-<form method="POST" class="post-form" >  
+<form method="POST" class="post-form" action="/update/{{note.id}}" >  
         {% csrf_token %}  
     <div class="container">  
 <br>  
@@ -30,12 +30,12 @@
     <div class="form-group row">  
     <label class="col-sm-2 col-form-label">Note Text:</label>  x
     <div class="col-sm-4">  
-        <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{ note.text }}" />  
+        <input type="text" name="eemail" id="id_eemail" required maxlength="254" value="{{ note.text }}" />  
     </div>  
     <div class="form-group row">  
     <label class="col-sm-2 col-form-label">Note Tag:</label>  x
     <div class="col-sm-4">  
-        <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{ note.tag }}" />  
+        <input type="text" name="eemail" id="id_eemail" required maxlength="254" value="{{ note.tag }}" />  
     </div>  
 
     <div class="form-group row">  
