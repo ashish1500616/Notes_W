@@ -124,3 +124,5 @@ os.path.join(os.path.dirname(BASE_DIR), "notes", "notes_app",  "templates","note
 
 )
 INTERNAL_IPS=['127.0.0.1']
+
+TIME_ZONE =  'Asia/Kolkata'
